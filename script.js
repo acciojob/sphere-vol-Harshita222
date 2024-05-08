@@ -2,18 +2,23 @@ function volume_sphere() {
     //Write your code here
 
 
-	event.preventDefault(); // Prevent form submission and page reload
+	event.preventDefault(); 
 
-    // Get the value of the radius entered by the user
+    
     const radiusInput = document.getElementById('radius');
     const radius = parseFloat(radiusInput.value);
 
     // Validate the input
-    if (isNaN(radius) || radius < 0) {
-        // alert('Please enter a non-negative number for the radius.');
-        return; // Exit the function if input is invalid
-    }
-
+    // if (isNaN(radius) || radius < 0) {
+    //     // alert('Please enter a non-negative number for the radius.');
+    //     return; 
+    // }
+if(radius < 0 || isNaN(radius)) {
+    volume = 'NaN';
+} else {
+    volume = (4/3) * Math.PI * Math.pow(radius, 3);
+    volume = volume.toFixed(4); // rounding to 4 decimal places
+}
     // Calculate the volume of the sphere
     const volume = (4/3) * Math.PI * Math.pow(radius, 3);
 
