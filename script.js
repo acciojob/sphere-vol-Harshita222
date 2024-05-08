@@ -13,6 +13,8 @@ function volume_sphere() {
     //     // alert('Please enter a non-negative number for the radius.');
     //     return; 
     // }
+
+	let volume;
 if(radius < 0 || isNaN(radius)) {
     volume = 'NaN';
 } else {
